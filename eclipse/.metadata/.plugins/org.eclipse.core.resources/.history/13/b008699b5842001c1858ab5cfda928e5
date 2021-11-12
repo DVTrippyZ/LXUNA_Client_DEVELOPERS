@@ -1,0 +1,69 @@
+package intent.modules.movement;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.network.play.client.C01PacketChatMessage;
+import net.minecraft.network.play.client.C03PacketPlayer;
+
+import net.minecraft.tileentity.*;
+
+public class ChestESP extends Module{
+
+	
+	
+	
+	
+	public void onEnable() {
+		
+		
+		
+	}
+	
+	public void onDisable() {
+		
+
+		
+	}
+	
+	
+	public ChestESP() {
+		super("ChestESP", Keyboard.KEY_NONE, Category.RENDER, "Y");
+		
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				
+			}
+		}
+	}
+	
+	public void onRender() {
+		
+		
+		
+		for(Object o : mc.theWorld.loadedTileEntityList) {
+			
+			if((o instanceof TileEntityChest) || (o instanceof TileEntityEnderChest)) {
+				TileEntityChest chest = (TileEntityChest)o;
+				TileEntityEnderChest enderChest = (TileEntityEnderChest)o;
+				
+				int x = chest.getPos().getX();
+				int y = chest.getPos().getY();
+				int z = chest.getPos().getZ();
+				
+				double xPos = RenderManager.renderPosX;
+				double yPos = RenderManager.renderPosY;
+				double zPos = RenderManager.renderPosZ;
+			}
+		}
+		
+	}
+
+}

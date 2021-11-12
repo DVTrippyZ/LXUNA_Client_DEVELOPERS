@@ -1,0 +1,106 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 23/10/21 3:16 PM
+Description: Tesselating block model
+
+java.lang.ArrayIndexOutOfBoundsException: 7
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:388)
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:397)
+	at net.minecraft.block.Block.shouldSideBeRendered(Block.java:466)
+	at net.minecraft.client.renderer.BlockModelRenderer.renderModelAmbientOcclusion(BlockModelRenderer.java:104)
+	at net.minecraft.client.renderer.BlockModelRenderer.renderBlockModel(BlockModelRenderer.java:70)
+	at net.minecraft.client.renderer.BlockModelRenderer.func_178259_a(BlockModelRenderer.java:54)
+	at net.minecraft.client.renderer.BlockRendererDispatcher.func_175018_a(BlockRendererDispatcher.java:120)
+	at net.minecraft.client.renderer.chunk.RenderChunk.func_178581_b(RenderChunk.java:251)
+	at net.minecraft.client.renderer.chunk.ChunkRenderWorker.func_178474_a(ChunkRenderWorker.java:97)
+	at net.minecraft.client.renderer.chunk.ChunkRenderWorker.run(ChunkRenderWorker.java:42)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:388)
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:397)
+	at net.minecraft.block.Block.shouldSideBeRendered(Block.java:466)
+	at net.minecraft.client.renderer.BlockModelRenderer.renderModelAmbientOcclusion(BlockModelRenderer.java:104)
+
+-- Block model being tesselated --
+Details:
+	Block: minecraft:stone[variant=stone]
+	Block location: World: (560,48,192), Chunk: (at 0,3,0 in 35,12; contains blocks 560,0,192 to 575,255,207), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Using AO: true
+Stacktrace:
+	at net.minecraft.client.renderer.BlockModelRenderer.renderBlockModel(BlockModelRenderer.java:70)
+	at net.minecraft.client.renderer.BlockModelRenderer.func_178259_a(BlockModelRenderer.java:54)
+
+-- Block being tesselated --
+Details:
+	Block type: ID #1 (tile.stone // net.minecraft.block.BlockStone)
+	Block data value: 0 / 0x0 / 0b0000
+	Block location: World: (560,48,192), Chunk: (at 0,3,0 in 35,12; contains blocks 560,0,192 to 575,255,207), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+Stacktrace:
+	at net.minecraft.client.renderer.BlockRendererDispatcher.func_175018_a(BlockRendererDispatcher.java:120)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player180'/222, l='MpServer', x=564.63, y=69.00, z=192.50]]
+	Chunk stats: MultiplayerChunkCache: 90, 90
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 57462 game time, 2486 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 58 total; [EntityCreeper['Creeper'/128, l='MpServer', x=613.56, y=18.00, z=243.81], EntityBat['Bat'/132, l='MpServer', x=634.53, y=14.97, z=196.75], EntityBat['Bat'/133, l='MpServer', x=635.66, y=22.41, z=214.28], EntityCreeper['Creeper'/134, l='MpServer', x=634.50, y=16.00, z=213.50], EntityCreeper['Creeper'/135, l='MpServer', x=638.50, y=22.00, z=209.50], EntityCreeper['Creeper'/136, l='MpServer', x=634.69, y=22.00, z=208.88], EntityBat['Bat'/137, l='MpServer', x=632.88, y=20.91, z=223.81], EntityBat['Bat'/138, l='MpServer', x=631.25, y=20.78, z=225.34], EntityBat['Bat'/147, l='MpServer', x=640.53, y=27.31, z=191.75], EntitySkeleton['Skeleton'/55, l='MpServer', x=502.72, y=23.00, z=159.09], EntityCreeper['Creeper'/56, l='MpServer', x=496.47, y=29.00, z=209.41], EntityCreeper['Creeper'/57, l='MpServer', x=505.44, y=35.02, z=238.31], EntityZombie['Zombie'/58, l='MpServer', x=506.50, y=37.00, z=265.50], EntityCreeper['Creeper'/59, l='MpServer', x=513.44, y=41.00, z=188.94], EntityBat['Bat'/60, l='MpServer', x=512.25, y=37.56, z=202.88], EntityCreeper['Creeper'/61, l='MpServer', x=527.50, y=46.00, z=198.50], EntityBat['Bat'/62, l='MpServer', x=514.31, y=35.02, z=207.06], EntitySkeleton['Skeleton'/63, l='MpServer', x=512.50, y=47.00, z=217.50], EntitySkeleton['Skeleton'/64, l='MpServer', x=516.34, y=46.00, z=221.47], EntityCreeper['Creeper'/65, l='MpServer', x=524.50, y=32.00, z=222.50], EntityCreeper['Creeper'/66, l='MpServer', x=525.50, y=32.00, z=221.50], EntityBat['Bat'/67, l='MpServer', x=515.53, y=32.28, z=215.03], EntitySkeleton['Skeleton'/68, l='MpServer', x=516.69, y=46.00, z=222.69], EntityCreeper['Creeper'/71, l='MpServer', x=537.69, y=17.00, z=157.25], EntityCreeper['Creeper'/72, l='MpServer', x=534.66, y=17.00, z=153.69], EntityCreeper['Creeper'/73, l='MpServer', x=535.28, y=19.00, z=165.69], EntityZombie['Zombie'/74, l='MpServer', x=533.41, y=34.00, z=170.53], EntityZombie['Zombie'/75, l='MpServer', x=534.34, y=32.00, z=166.34], EntitySkeleton['Skeleton'/76, l='MpServer', x=530.50, y=31.00, z=208.50], EntityCreeper['Creeper'/77, l='MpServer', x=530.50, y=51.00, z=222.97], EntityCreeper['Creeper'/82, l='MpServer', x=557.31, y=52.02, z=186.59], EntityZombie['Zombie'/83, l='MpServer', x=552.00, y=58.00, z=180.41], EntitySkeleton['Skeleton'/84, l='MpServer', x=554.91, y=51.00, z=184.44], EntityZombie['Zombie'/90, l='MpServer', x=570.50, y=46.00, z=148.50], EntityZombie['Zombie'/91, l='MpServer', x=573.50, y=23.00, z=171.50], EntityPlayerSP['Player180'/222, l='MpServer', x=564.63, y=69.00, z=192.50], EntityBat['Bat'/98, l='MpServer', x=578.75, y=53.10, z=142.75], EntityCreeper['Creeper'/99, l='MpServer', x=585.16, y=21.00, z=153.91], EntityCreeper['Creeper'/100, l='MpServer', x=584.41, y=21.00, z=154.88], EntitySpider['Spider'/101, l='MpServer', x=584.19, y=21.00, z=152.69], EntitySpider['Spider'/102, l='MpServer', x=583.28, y=45.00, z=210.88], EntityItem['item.tile.sand.default'/109, l='MpServer', x=597.44, y=65.00, z=167.69], EntityItem['item.tile.sand.default'/110, l='MpServer', x=594.91, y=65.00, z=166.53], EntityItem['item.tile.sand.default'/111, l='MpServer', x=597.75, y=65.00, z=166.19], EntityItem['item.tile.sand.default'/112, l='MpServer', x=594.50, y=65.00, z=165.03], EntityItem['item.tile.sand.default'/113, l='MpServer', x=595.34, y=65.00, z=165.53], EntityItem['item.tile.sand.default'/114, l='MpServer', x=597.13, y=65.00, z=164.31], EntityItem['item.tile.sand.default'/115, l='MpServer', x=596.28, y=65.00, z=164.13], EntityItem['item.tile.sand.default'/116, l='MpServer', x=596.47, y=65.00, z=168.88], EntityItem['item.tile.sand.default'/117, l='MpServer', x=597.88, y=66.00, z=168.88], EntityItem['item.tile.sandStone.default'/118, l='MpServer', x=594.84, y=64.00, z=167.88], EntityItem['item.tile.sand.default'/119, l='MpServer', x=595.41, y=64.00, z=167.69], EntityItem['item.tile.sand.default'/120, l='MpServer', x=593.34, y=65.00, z=165.53], EntityCreeper['Creeper'/121, l='MpServer', x=602.19, y=20.00, z=237.88], EntityBat['Bat'/124, l='MpServer', x=621.63, y=21.03, z=229.34], EntityBat['Bat'/125, l='MpServer', x=621.84, y=21.16, z=230.50], EntityBat['Bat'/126, l='MpServer', x=619.00, y=18.78, z=231.63], EntityBat['Bat'/127, l='MpServer', x=617.94, y=20.00, z=233.31]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2773)
+	at net.minecraft.client.renderer.chunk.ChunkRenderWorker.run(ChunkRenderWorker.java:52)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_301, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 775820136 bytes (739 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.1
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	OptiFine Version: OptiFine_1.8_HD_U_H6
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 471.41
+	OpenGlRenderer: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 16

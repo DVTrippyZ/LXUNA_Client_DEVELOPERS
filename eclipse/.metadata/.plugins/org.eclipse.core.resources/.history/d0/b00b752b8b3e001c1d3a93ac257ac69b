@@ -1,0 +1,79 @@
+package intent.modules.movement;
+
+import java.util.Comparator;
+import java.util.List;
+import intent.utility.Timer;
+import java.util.stream.Collectors;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+import net.minecraft.client.gui.inventory.GuiInventory;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.network.play.client.C02PacketUseEntity;
+import net.minecraft.network.play.client.C02PacketUseEntity.Action;
+import net.minecraft.network.play.client.C03PacketPlayer;
+
+public class KillAuraGUI extends Module {
+
+	public Timer timer = new Timer();
+	public static int targetHealth = 0;
+	public static boolean isAttackingTarget = false;
+	public static EntityLivingBase fixTarget = null;
+	
+	public void onEnable() {
+		
+		//mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.42, mc.thePlayer.posZ, mc.thePlayer.onGround));
+		
+		
+		
+		
+	}
+	
+	public void onDisable() {
+		
+		
+		
+	}
+	
+	
+	public KillAuraGUI() {
+		super("KillAuraGUI", Keyboard.KEY_NONE, Category.RENDER, "Y");
+		
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+			
+				List<EntityLivingBase> targets = (List<EntityLivingBase>) mc.theWorld.loadedEntityList.stream().filter(EntityLivingBase.class::isInstance).collect(Collectors.toList());
+				
+				targets = targets.stream().filter(entity-> entity.getDistanceToEntity(mc.thePlayer) < 5 && entity != mc.thePlayer).collect(Collectors.toList());
+				
+				targets.sort(Comparator.comparingDouble(entity -> ((EntityLivingBase)entity).getDistanceToEntity(mc.thePlayer)));
+				
+				
+				if(!targets.isEmpty()) {
+					EntityLivingBase target = targets.get(0);
+					
+					if(timer.hasTimeElapsed(300 / 10, true)) {
+						
+						targetHealth = (int)target.getHealth();
+						isAttackingTarget = true;
+						fixTarget = targets.get(0);
+						mc.thePlayer.swingItem();
+						System.out.println((int)target.getDistanceToEntity(mc.thePlayer));
+						
+						
+						mc.thePlayer.sendQueue.addToSendQueue(new C02PacketUseEntity(target, Action.ATTACK));
+					}
+				}else {
+					isAttackingTarget = false;
+				}
+			}
+		}
+	}
+
+}

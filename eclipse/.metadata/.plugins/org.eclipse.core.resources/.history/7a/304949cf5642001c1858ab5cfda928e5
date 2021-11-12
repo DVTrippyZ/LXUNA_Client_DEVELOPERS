@@ -1,0 +1,56 @@
+package intent.modules.movement;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+import net.minecraft.network.play.client.C01PacketChatMessage;
+import net.minecraft.network.play.client.C03PacketPlayer;
+
+public class ChestESP extends Module{
+
+	
+	
+	//mc.thePlayer.sendQueue.addToSendQueue(new C01PacketChatMessage(null));
+	
+	public void onEnable() {
+		
+		int count = 0;
+		
+		for(Module m: Client.modules) {
+			mc.thePlayer.sendQueue.addToSendQueue(new C01PacketChatMessage(m.name));
+			
+			count++;
+		}
+		
+	}
+	
+	public void onDisable() {
+		
+int count = 0;
+		
+		for(Module m: Client.modules) {
+			mc.thePlayer.sendQueue.addToSendQueue(new C01PacketChatMessage(m.name));
+			
+			count++;
+		}
+		
+	}
+	
+	
+	public ChestESP() {
+		super("List", Keyboard.KEY_APOSTROPHE, Category.CHAT, "O");
+		
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				
+			}
+		}
+	}
+
+}

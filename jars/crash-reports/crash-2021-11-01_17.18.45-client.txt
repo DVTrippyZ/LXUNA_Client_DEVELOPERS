@@ -1,0 +1,88 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 01/11/21 5:18 PM
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: Color parameter outside of expected range: Alpha
+	at java.awt.Color.testColorValueRange(Color.java:310)
+	at java.awt.Color.<init>(Color.java:395)
+	at intent.ui.HUD.draw(HUD.java:83)
+	at net.minecraft.client.gui.GuiIngame.func_175180_a(GuiIngame.java:353)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1340)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1135)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:416)
+	at net.minecraft.client.main.Main.main(Main.java:114)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.awt.Color.testColorValueRange(Color.java:310)
+	at java.awt.Color.<init>(Color.java:395)
+	at intent.ui.HUD.draw(HUD.java:83)
+	at net.minecraft.client.gui.GuiIngame.func_175180_a(GuiIngame.java:353)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player689'/179, l='MpServer', x=580.31, y=72.00, z=473.70]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 344466 game time, 145371 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 30 total; [EntityPlayerSP['Player689'/179, l='MpServer', x=580.31, y=72.00, z=473.70], EntityBat['Bat'/202, l='MpServer', x=548.17, y=34.24, z=443.44], EntityZombie['Zombie'/203, l='MpServer', x=559.31, y=34.00, z=458.84], EntityZombie['Zombie'/204, l='MpServer', x=560.19, y=34.00, z=459.28], EntitySkeleton['Skeleton'/205, l='MpServer', x=542.13, y=28.00, z=512.56], EntityZombie['Zombie'/270, l='MpServer', x=564.34, y=32.00, z=514.34], EntitySpider['Spider'/206, l='MpServer', x=557.50, y=49.00, z=524.50], EntityBat['Bat'/207, l='MpServer', x=555.44, y=48.97, z=518.53], EntitySkeleton['Skeleton'/656, l='MpServer', x=545.50, y=32.00, z=444.50], EntitySkeleton['Skeleton'/657, l='MpServer', x=544.50, y=32.00, z=448.50], EntitySheep['Sheep'/211, l='MpServer', x=558.53, y=71.00, z=438.63], EntitySheep['Sheep'/212, l='MpServer', x=560.16, y=71.00, z=439.13], EntitySheep['Sheep'/213, l='MpServer', x=558.69, y=71.00, z=437.50], EntitySheep['Sheep'/214, l='MpServer', x=559.38, y=71.00, z=436.78], EntityZombie['Zombie'/215, l='MpServer', x=560.50, y=34.00, z=463.50], EntitySpider['Spider'/217, l='MpServer', x=569.86, y=46.70, z=464.00], EntityItem['item.item.rottenFlesh'/218, l='MpServer', x=565.06, y=72.00, z=474.06], EntityBat['Bat'/474, l='MpServer', x=535.58, y=27.58, z=417.48], EntityBat['Bat'/475, l='MpServer', x=551.72, y=31.42, z=529.84], EntityBat['Bat'/220, l='MpServer', x=566.41, y=44.13, z=537.59], EntityCreeper['Creeper'/862, l='MpServer', x=539.50, y=19.00, z=531.50], EntitySheep['Sheep'/224, l='MpServer', x=616.56, y=70.00, z=447.19], EntitySkeleton['Skeleton'/608, l='MpServer', x=531.50, y=21.00, z=529.50], EntitySheep['Sheep'/225, l='MpServer', x=615.56, y=71.00, z=456.81], EntityZombie['Zombie'/610, l='MpServer', x=531.50, y=21.00, z=530.50], EntitySkeleton['Skeleton'/935, l='MpServer', x=573.00, y=34.00, z=554.72], EntityEnderman['Enderman'/231, l='MpServer', x=658.03, y=28.00, z=509.78], EntitySkeleton['Skeleton'/936, l='MpServer', x=573.94, y=34.00, z=554.13], EntityZombie['Zombie'/689, l='MpServer', x=559.50, y=40.00, z=554.50], EntityZombie['Zombie'/570, l='MpServer', x=550.50, y=60.00, z=476.06]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2783)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:445)
+	at net.minecraft.client.main.Main.main(Main.java:114)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_301, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 589060640 bytes (561 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.1
+	OpenGL: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 471.41, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	OptiFine Version: OptiFine_1.8_HD_U_H6
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 471.41
+	OpenGlRenderer: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 16
