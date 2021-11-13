@@ -1,5 +1,8 @@
 package intent.modules.movement;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import org.lwjgl.input.Keyboard;
 
 import intent.events.Event;
@@ -107,7 +110,19 @@ public class Scaffold extends Module{
 			mc.thePlayer.swingItem();
 			mc.playerController.func_178890_a(mc.thePlayer, mc.theWorld, mc.thePlayer.getHeldItem(), pos, face, new Vec3(0.5D, 0.5D, 0.5D));
 		} else {
+			
 			mc.gameSettings.keyBindSneak.pressed = true;
+			new java.util.Timer().schedule( 
+			        new java.util.TimerTask() {
+			            @Override
+			            public void run() {
+			            	unCrouch();
+			            }
+			        }, 
+			        5000 
+			);
+		  
+			
 			
 		}
 		
@@ -120,5 +135,8 @@ public class Scaffold extends Module{
 			mc.gameSettings.keyBindSneak.pressed = false;
 		}
 	}
+	
+	
+	
 
 }

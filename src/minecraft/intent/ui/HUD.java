@@ -94,6 +94,7 @@ public class HUD {
 		Gui.drawRect(sr.getScaledWidth() - 29 - 250, sr.getScaledHeight() - 4 - 25 - 100, sr.getScaledWidth() - 4 - 210, sr.getScaledHeight() - 4 - 79, 0x80333647);
 		fr.drawString(Integer.toString(mc.thePlayer.getHeldItem().stackSize), 208, 153, -1);
 		fr.drawString(mc.thePlayer.getHeldItem().getDisplayName(), 208, 133, -1);
+		
 		}
 	}
 	
