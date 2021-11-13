@@ -1,113 +1,13 @@
-[22:18:17] [Client thread/INFO]: Setting user: Player535
-[22:18:17] [Client thread/INFO]: (Session ID is token:0:Player535)
-[22:18:18] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:18:18] [Client thread/INFO]: Reloading ResourceManager: Default
-[22:18:18] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[22:18:18] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[22:18:18] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:18:19] [Thread-7/INFO]: OpenAL initialized.
-[22:18:19] [Sound Library Loader/INFO]: Sound engine started
-[22:18:21] [Client thread/INFO]: Created: 1024x512 textures-atlas
-[22:18:23] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[22:18:23] [Server thread/INFO]: Generating keypair
-[22:18:23] [Server thread/INFO]: Preparing start region for level 0
-[22:18:23] [Server thread/INFO]: Changing view distance to 8, from 10
-[22:18:24] [Server thread/INFO]: Player535[local:E:6286b924] logged in with entity id 155 at (599.431537865459, 72.0, 310.9629308371356)
-[22:18:24] [Server thread/INFO]: Player535 joined the game
-[22:18:24] [Server thread/INFO]: Saving and pausing game...
-[22:18:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:18:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:18:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:18:25] [Server thread/INFO]: Saving and pausing game...
-[22:18:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:18:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:18:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:18:29] [Server thread/INFO]: [Player535: Set own game mode to Creative Mode]
-[22:18:29] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[22:18:30] [Server thread/INFO]: Player535 has just earned the achievement [Taking Inventory]
-[22:18:30] [Client thread/INFO]: [CHAT] Player535 has just earned the achievement [Taking Inventory]
-[22:19:08] [Server thread/INFO]: Saving and pausing game...
-[22:19:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:19:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:19:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:19:09] [Server thread/INFO]: <Player535> KillAuraRotate
-[22:19:09] [Server thread/INFO]: <Player535> TargetStats
-[22:19:09] [Server thread/INFO]: <Player535> CriticalAura
-[22:19:09] [Server thread/INFO]: <Player535> SpeedPlace
-[22:19:09] [Server thread/INFO]: <Player535> RenderSelf
-[22:19:09] [Server thread/INFO]: <Player535> SpeedHack
-[22:19:09] [Server thread/INFO]: <Player535> AutoArmor
-[22:19:09] [Server thread/INFO]: <Player535> HypixelFly
-[22:19:09] [Server thread/INFO]: <Player535> Tarantula
-[22:19:09] [Server thread/INFO]: <Player535> KeyPress
-[22:19:09] [Server thread/INFO]: <Player535> AntiEntity
-[22:19:09] [Server thread/INFO]: <Player535> HighJump
-[22:19:09] [Server thread/INFO]: <Player535> AimAssist
-[22:19:09] [Server thread/INFO]: <Player535> Scaffold
-[22:19:09] [Server thread/INFO]: <Player535> FastWalk
-[22:19:09] [Server thread/INFO]: <Player535> Criticals
-[22:19:09] [Server thread/INFO]: <Player535> JetPack
-[22:19:09] [Server thread/INFO]: <Player535> KillAura
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> KillAuraRotate
-[22:19:09] [Server thread/INFO]: <Player535> AirJump
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> TargetStats
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> CriticalAura
-[22:19:09] [Server thread/INFO]: <Player535> Dolphin
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> SpeedPlace
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> RenderSelf
-[22:19:09] [Server thread/INFO]: <Player535> IsDead
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> SpeedHack
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> AutoArmor
-[22:19:09] [Server thread/INFO]: <Player535> TabGUI
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> HypixelFly
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Tarantula
-[22:19:09] [Server thread/INFO]: <Player535> AntiBot
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> KeyPress
-[22:19:09] [Server thread/INFO]: <Player535> HillRun
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> AntiEntity
-[22:19:09] [Server thread/INFO]: <Player535> Elytra
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> HighJump
-[22:19:09] [Server thread/INFO]: <Player535> Bright
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> AimAssist
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Scaffold
-[22:19:09] [Server thread/INFO]: <Player535> Reach
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> FastWalk
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Criticals
-[22:19:09] [Server thread/INFO]: <Player535> Toxic
-[22:19:09] [Server thread/INFO]: <Player535> Bhop
-[22:19:09] [Server thread/INFO]: <Player535> Fall
-[22:19:09] [Server thread/INFO]: <Player535> List
-[22:19:09] [Server thread/INFO]: <Player535> Fly
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> JetPack
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> KillAura
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> AirJump
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Dolphin
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> IsDead
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> TabGUI
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> AntiBot
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> HillRun
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Elytra
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Bright
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Reach
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Toxic
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Bhop
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Fall
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> List
-[22:19:09] [Client thread/INFO]: [CHAT] <Player535> Fly
-[22:19:10] [Server thread/INFO]: Saving and pausing game...
-[22:19:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:19:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:19:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:19:27] [Server thread/INFO]: Saving and pausing game...
-[22:19:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:19:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:19:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:20:03] [Client thread/INFO]: Stopping!
-[22:20:03] [Client thread/INFO]: SoundSystem shutting down...
-[22:20:03] [Server thread/INFO]: Stopping server
-[22:20:03] [Server thread/INFO]: Saving players
-[22:20:03] [Server thread/INFO]: Saving worlds
-[22:20:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:20:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:20:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:20:03] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[17:30:58] [Client thread/INFO]: Setting user: Player700
+[17:30:58] [Client thread/INFO]: (Session ID is token:0:Player700)
+[17:30:59] [Client thread/INFO]: LWJGL Version: 2.9.1
+[17:31:00] [Client thread/INFO]: Reloading ResourceManager: Default
+[17:31:00] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:31:01] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[17:31:01] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:31:01] [Thread-7/INFO]: OpenAL initialized.
+[17:31:01] [Sound Library Loader/INFO]: Sound engine started
+[17:31:03] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[17:31:05] [Client thread/INFO]: Stopping!
+[17:31:05] [Client thread/INFO]: SoundSystem shutting down...
+[17:31:06] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
