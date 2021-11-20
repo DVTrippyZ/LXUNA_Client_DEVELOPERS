@@ -10,11 +10,14 @@ import org.lwjgl.opengl.Display;
 import intent.events.Event;
 import intent.events.listeners.EventKey;
 import intent.modules.Module;
+
 import intent.modules.Module.Category;
 
 import intent.modules.movement.*;
 import intent.ui.HUD;
 import render.Bright;
+import render.ChestStealer;
+import render.SimpleUI;
 import render.TabGUI;
 //import render.Xray;
 //import render.XrayUtils;
@@ -61,9 +64,13 @@ public class Client {
 		modules.add(new RenderPlayerLxuna());
 		modules.add(new KeyPressLogs());
 		modules.add(new AutoArmor());
-		modules.add(new KillAuraRotations());
+		
 		modules.add(new KillAuraGUI());
 		modules.add(new Scaffold());
+		modules.add(new NameChanger());
+		modules.add(new SimpleUI());
+		modules.add(new ChestStealer());
+		
 		//Adding the script you made
 		
 		
@@ -83,6 +90,7 @@ public class Client {
 		for(Module m : modules) {
 			if(!m.toggled) {
 				continue;
+				
 			}
 			m.onEvent(e);
 		}

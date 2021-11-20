@@ -263,15 +263,17 @@ public class ItemRenderer
 
     private void func_178096_b(float p_178096_1_, float p_178096_2_)
     {
-        GlStateManager.translate(0.56F, -0.52F, -0.71999997F);
+        GlStateManager.translate(0.56F, -0.52F, -0.91999997F);
         GlStateManager.translate(0.0F, p_178096_1_ * -0.6F, 0.0F);
         GlStateManager.rotate(45.0F, 0.0F, 1.0F, 0.0F);
         float var3 = MathHelper.sin(p_178096_2_ * p_178096_2_ * (float)Math.PI);
         float var4 = MathHelper.sin(MathHelper.sqrt_float(p_178096_2_) * (float)Math.PI);
-        GlStateManager.rotate(var3 * -20.0F, 0.0F, 1.0F, 0.0F);
-        GlStateManager.rotate(var4 * -20.0F, 0.0F, 0.0F, 1.0F);
-        GlStateManager.rotate(var4 * -80.0F, 1.0F, 0.0F, 0.0F);
-        GlStateManager.scale(0.4F, 0.4F, 0.4F);
+        GlStateManager.rotate(var3 * -200.0F, 0.0F, 1.0F, 0.0F);
+        GlStateManager.rotate(var4 * -200.0F, 0.0F, 0.0F, 1.0F);
+        GlStateManager.rotate(var4 * -700.0F, 1.0F, 0.0F, 0.0F);
+        GlStateManager.scale(0.3F, 0.4F, 0.4F);
+        
+        //tag ? animations
     }
 
     private void func_178098_a(float p_178098_1_, AbstractClientPlayer p_178098_2_)

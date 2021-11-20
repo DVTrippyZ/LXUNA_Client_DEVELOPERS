@@ -1,0 +1,31 @@
+package intent.ui;
+
+public class Rainbow {
+
+	
+	
+	public static int render(int delay, String fade) {
+		
+		
+		int y = reTypeInt("0x" + fade);
+	
+		
+		
+		
+		
+		return 0;
+		
+		
+	}
+	
+	
+	private static String reTypeString(int i) {
+		return Integer.toString(i);
+		}
+	
+	private static int reTypeInt(String s) {
+		return Integer.parseInt(s);
+		}
+	
+	
+}

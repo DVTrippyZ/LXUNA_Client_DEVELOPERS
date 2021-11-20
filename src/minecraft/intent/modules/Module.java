@@ -1,6 +1,12 @@
 package intent.modules;
 
+import java.util.ArrayList;
+
+import java.util.List;
+
+import java.util.Arrays;
 import intent.events.Event;
+import intent.settings.Setting;
 import net.minecraft.client.Minecraft;
 
 public class Module {
@@ -9,8 +15,11 @@ public class Module {
 	public boolean toggled;
 	public int keyCode;
 	public Category category;
-	public Minecraft mc = Minecraft.getMinecraft();
 	
+	public Minecraft mc = Minecraft.getMinecraft();
+	public boolean expanded;
+	public List<Setting> settings = new ArrayList<Setting>();
+	public int index;
 	
 	public String safe;
 	
@@ -24,6 +33,11 @@ public class Module {
 		this.category = c;
 		this.safe = safe;
 		
+	}
+	
+	
+	public void addSettings(Setting... settings) {
+	    this.settings.addAll(Arrays.asList(settings));
 	}
 	
 	public boolean isEnabled() {

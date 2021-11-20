@@ -1,5 +1,0 @@
-package intent.modules.movement;
-
-public enum BlockUtils {
-
-}

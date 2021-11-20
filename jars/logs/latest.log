@@ -1,32 +1,53 @@
-[18:12:41] [Client thread/INFO]: Setting user: Player737
-[18:12:41] [Client thread/INFO]: (Session ID is token:0:Player737)
-[18:12:42] [Client thread/INFO]: LWJGL Version: 2.9.1
-[18:12:42] [Client thread/INFO]: Reloading ResourceManager: Default
-[18:12:42] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:12:43] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[18:12:43] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:12:43] [Thread-7/INFO]: OpenAL initialized.
-[18:12:43] [Sound Library Loader/INFO]: Sound engine started
-[18:12:44] [Client thread/INFO]: Created: 1024x512 textures-atlas
-[18:12:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[18:12:49] [Server thread/INFO]: Generating keypair
-[18:12:50] [Server thread/INFO]: Preparing start region for level 0
-[18:12:50] [Server thread/INFO]: Changing view distance to 8, from 10
-[18:12:50] [Server thread/INFO]: Player737[local:E:5017c7d2] logged in with entity id 155 at (576.087636455386, 73.0, 319.40142530106954)
-[18:12:50] [Server thread/INFO]: Player737 joined the game
-[18:12:51] [Server thread/INFO]: Saving and pausing game...
-[18:12:51] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:12:51] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:12:51] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:14:55] [Server thread/INFO]: Saving and pausing game...
-[18:14:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:14:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:14:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:15:40] [Server thread/INFO]: Saving and pausing game...
-[18:15:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:15:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:15:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:16:37] [Server thread/INFO]: Saving and pausing game...
-[18:16:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:16:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:16:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:57:28] [Client thread/INFO]: Setting user: Player375
+[16:57:28] [Client thread/INFO]: (Session ID is token:0:Player375)
+[16:57:29] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:57:29] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:57:29] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:57:30] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[16:57:30] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:57:30] [Thread-7/INFO]: OpenAL initialized.
+[16:57:30] [Sound Library Loader/INFO]: Sound engine started
+[16:57:32] [Client thread/INFO]: Created: 4096x2048 textures-atlas
+[16:57:37] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[16:57:37] [Server thread/INFO]: Generating keypair
+[16:57:37] [Server thread/INFO]: Preparing start region for level 0
+[16:57:38] [Server thread/INFO]: Changing view distance to 8, from 10
+[16:57:38] [Server thread/INFO]: Player375[local:E:3b58fd7e] logged in with entity id 199 at (533.7266698510431, 64.0, 214.27622249627427)
+[16:57:38] [Server thread/INFO]: Player375 joined the game
+[16:57:38] [Server thread/INFO]: Saving and pausing game...
+[16:57:38] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:57:38] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:57:38] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:58:13] [Server thread/INFO]: Saving and pausing game...
+[16:58:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:58:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:58:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:58:46] [Server thread/INFO]: Saving and pausing game...
+[16:58:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:58:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:58:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:58:57] [Server thread/INFO]: Saving and pausing game...
+[16:58:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:58:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:58:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[17:01:11] [Server thread/INFO]: Saving and pausing game...
+[17:01:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[17:01:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[17:01:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[17:01:40] [Server thread/INFO]: Saving and pausing game...
+[17:01:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[17:01:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[17:01:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[17:01:49] [Server thread/INFO]: Saving and pausing game...
+[17:01:49] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[17:01:49] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[17:01:49] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[17:02:54] [Client thread/INFO]: Stopping!
+[17:02:54] [Client thread/INFO]: SoundSystem shutting down...
+[17:02:54] [Server thread/INFO]: Stopping server
+[17:02:54] [Server thread/INFO]: Saving players
+[17:02:54] [Server thread/INFO]: Saving worlds
+[17:02:54] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[17:02:54] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[17:02:54] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[17:02:54] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

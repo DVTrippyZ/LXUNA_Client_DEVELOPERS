@@ -110,6 +110,11 @@ public class GuiIngame extends Gui
         this.field_175192_A = 70;
         this.field_175193_B = 20;
     }
+    
+    
+    
+    
+
 
     public void func_175180_a(float p_175180_1_)
     {
@@ -119,6 +124,12 @@ public class GuiIngame extends Gui
         this.mc.entityRenderer.setupOverlayRendering();
         GlStateManager.enableBlend();
 
+        
+       
+        
+        
+        
+        
         if (Config.isVignetteEnabled())
         {
             this.func_180480_a(this.mc.thePlayer.getBrightness(p_175180_1_), var2);

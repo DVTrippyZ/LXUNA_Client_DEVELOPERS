@@ -3,7 +3,9 @@ package net.minecraft.client.renderer.entity;
 import java.util.Iterator;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
@@ -363,6 +365,14 @@ public abstract class Render
             Tessellator var15 = Tessellator.getInstance();
             WorldRenderer var16 = var15.getWorldRenderer();
             byte var17 = 0;
+            
+            
+            if(p_147906_1_ instanceof AbstractClientPlayer) {
+            	   Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("img/froggy.png"));
+            	   Gui.drawModalRectWithCustomSizedTexture(-Minecraft.getMinecraft().fontRendererObj.getStringWidth(p_147906_1_.getDisplayName ().getFormattedText()) /2- 12, -2, 10, 10, 10, 10, 10,10);
+            	}
+            
+            
 
             if (p_147906_2_.equals("deadmau5"))
             {

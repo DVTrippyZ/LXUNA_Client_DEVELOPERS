@@ -1,0 +1,14 @@
+package render;
+
+
+
+public class CustomFontRenderLxuna {
+
+	
+
+	TrueTypeFont font = Text.prepareFont("WasterMaster10");
+	Color.white.bind();    //this is Line 163 in MainGameLoop.java
+	font.drawString(100, 50, Integer.toString(fps), Color.red);
+	
+	
+}

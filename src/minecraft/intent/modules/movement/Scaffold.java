@@ -10,6 +10,7 @@ import intent.events.listeners.EventUpdate;
 import intent.modules.Module;
 import net.minecraft.event.ClickEvent;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.C03PacketPlayer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -51,11 +52,14 @@ public class Scaffold extends Module{
 				
 				
 				BlockPos playerBlock = new BlockPos(mc.thePlayer.posX, mc.thePlayer.getEntityBoundingBox().minY, mc.thePlayer.posZ);
+				
+				
+				
 				if(mc.theWorld.isAirBlock(playerBlock.add(0, -1, 0))) {
 				
 					
 					if(isValidBlock(playerBlock.add(0, -2, 0))) {
-						place(playerBlock, EnumFacing.UP);
+						place(playerBlock, EnumFacing.DOWN);
 					}if(mc.theWorld.isAirBlock(playerBlock.add(0, -1, 0))) {
 							if(isValidBlock(playerBlock.add(0, -2, 0))) {
 								place(playerBlock.add(0, -1, 6), EnumFacing.UP);

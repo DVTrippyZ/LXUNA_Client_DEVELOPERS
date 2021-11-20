@@ -1,0 +1,7 @@
+{
+    "parent":"block/leaves_cross",
+    "textures": {
+        "all":"block/leaves_big_oak",
+	"bushy": "block/leaves_big_oak_bushy"
+    }
+}

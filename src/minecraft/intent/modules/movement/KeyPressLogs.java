@@ -31,6 +31,7 @@ public class KeyPressLogs extends Module{
 	
 	public KeyPressLogs() {
 		super("KeyPress", Keyboard.KEY_NONE, Category.RENDER, "O");
+		toggled = true;
 		
 	}
 	

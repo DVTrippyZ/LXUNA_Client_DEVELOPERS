@@ -2,9 +2,9 @@ package intent;
 
 public class Toucan {
 
-	public static int version = 1;
-	public static int prVersion = 12;
-	public static int toucanVersion(boolean VersionIsPublic) {
+	public static int version = 5;
+	public static int prVersion = 20;
+	public static int getToucanVersion(boolean VersionIsPublic) {
 		
 		if(VersionIsPublic) {
 		return version; 

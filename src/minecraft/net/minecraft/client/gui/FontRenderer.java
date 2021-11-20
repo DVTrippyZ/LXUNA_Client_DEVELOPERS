@@ -3,6 +3,11 @@ package net.minecraft.client.gui;
 import com.ibm.icu.text.ArabicShaping;
 import com.ibm.icu.text.ArabicShapingException;
 import com.ibm.icu.text.Bidi;
+
+import intent.Client;
+import intent.modules.Module;
+import intent.modules.movement.NameChanger;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -429,6 +434,14 @@ public class FontRenderer implements IResourceManagerReloadListener
      */
     private void renderStringAtPos(String p_78255_1_, boolean p_78255_2_)
     {
+    	
+    	if(NameChanger.toggled_1 && Minecraft.getMinecraft().thePlayer.getName() != null) {
+    		if(p_78255_1_.equalsIgnoreCase(Minecraft.getMinecraft().thePlayer.getName())) {
+    			p_78255_1_ = p_78255_1_.replace(Minecraft.getMinecraft().thePlayer.getName(), NameChanger.getName_1());
+    			
+    		}
+    	}
+    	
         for (int var3 = 0; var3 < p_78255_1_.length(); ++var3)
         {
             char var4 = p_78255_1_.charAt(var3);

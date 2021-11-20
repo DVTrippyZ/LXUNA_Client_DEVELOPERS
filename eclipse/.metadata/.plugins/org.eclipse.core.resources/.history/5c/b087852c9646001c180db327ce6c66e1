@@ -1,0 +1,43 @@
+package intent.ui;
+
+public class Rainbow {
+
+	
+	
+	public static int render(int delay, String fade) {
+		
+		int min = 100000;  
+		int max = 900000;  
+		int y = reTypeInt("0x" + fade);
+	
+		int random = (int)Math.random()*(max-min+1)+min;
+		
+		
+		new java.util.Timer().schedule( 
+		        new java.util.TimerTask() {
+		            @Override
+		            public void run() {
+		            	
+		            }
+		        }, 
+		        5000 
+		);
+		
+		
+		
+		return 0;
+		
+		
+	}
+	
+	
+	private static String reTypeString(int i) {
+		return Integer.toString(i);
+		}
+	
+	private static int reTypeInt(String s) {
+		return Integer.parseInt(s);
+		}
+	
+	
+}

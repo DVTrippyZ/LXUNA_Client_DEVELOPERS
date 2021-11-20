@@ -1,0 +1,5 @@
+package intent.settings;
+
+public class BooleanSetting {
+
+}

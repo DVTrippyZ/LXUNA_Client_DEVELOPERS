@@ -10,6 +10,7 @@ import org.lwjgl.input.Keyboard;
 import intent.events.Event;
 import intent.events.listeners.EventUpdate;
 import intent.modules.Module;
+import intent.settings.BooleanSetting;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.network.play.client.C02PacketUseEntity;
@@ -19,7 +20,7 @@ import net.minecraft.network.play.client.C03PacketPlayer;
 public class CriticalAura extends Module {
 
 	public Timer timer = new Timer();
-
+	public BooleanSetting rotations = new BooleanSetting("Rotations", false);
 	
 	
 	
@@ -43,6 +44,8 @@ public class CriticalAura extends Module {
 		
 		
 		super("CriticalAura", Keyboard.KEY_EQUALS, Category.COMBAT, "U");
+		this.addSettings(rotations);
+		
 		
 		
 	}
@@ -71,7 +74,7 @@ public class CriticalAura extends Module {
 						}
 						mc.thePlayer.sendQueue.addToSendQueue(new C02PacketUseEntity(target, Action.ATTACK));
 						
-						if(KillAuraRotations.Rotate2) {
+						if(rotations.isEnabled()) {
 							mc.thePlayer.rotationYaw = getRotations2(target)[0];
 							mc.thePlayer.rotationPitch = getRotations2(target)[1];
 						}

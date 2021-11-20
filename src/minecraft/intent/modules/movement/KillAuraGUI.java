@@ -25,6 +25,8 @@ public class KillAuraGUI extends Module {
 	public static EntityLivingBase fixTarget = null;
 	public static int distToTargetLX;
 	public static int armorOfTARGETLX;
+	public static String targetName_ = " ";
+	public static String targetWin_ = " ";
 	public void onEnable() {
 		
 		//mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.42, mc.thePlayer.posZ, mc.thePlayer.onGround));
@@ -44,6 +46,7 @@ public class KillAuraGUI extends Module {
 	
 	public KillAuraGUI() {
 		super("TargetStats", Keyboard.KEY_NONE, Category.RENDER, "Y");
+		toggled = true;
 		
 	}
 	
@@ -53,7 +56,7 @@ public class KillAuraGUI extends Module {
 			
 				List<EntityLivingBase> targets = (List<EntityLivingBase>) mc.theWorld.loadedEntityList.stream().filter(EntityLivingBase.class::isInstance).collect(Collectors.toList());
 				
-				targets = targets.stream().filter(entity-> entity.getDistanceToEntity(mc.thePlayer) < 21 && entity != mc.thePlayer).collect(Collectors.toList());
+				targets = targets.stream().filter(entity-> entity.getDistanceToEntity(mc.thePlayer) < 6 && entity != mc.thePlayer).collect(Collectors.toList());
 				
 				targets.sort(Comparator.comparingDouble(entity -> ((EntityLivingBase)entity).getDistanceToEntity(mc.thePlayer)));
 				
@@ -69,6 +72,13 @@ public class KillAuraGUI extends Module {
 						armorOfTARGETLX = target.getTotalArmorValue();
 						
 						distToTargetLX = (int)target.getDistanceToEntity(mc.thePlayer);
+						targetName_ = target.getDisplayName().getFormattedText();
+						
+						if((int)target.getHealth() >= mc.thePlayer.getHealth()) {
+							targetWin_ = "Loosing...";
+						} else {
+							targetWin_ = "Winning!";
+						}
 						
 						
 					}

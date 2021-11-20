@@ -10,6 +10,7 @@ import org.lwjgl.input.Keyboard;
 import intent.events.Event;
 import intent.events.listeners.EventUpdate;
 import intent.modules.Module;
+import intent.settings.BooleanSetting;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.network.play.client.C02PacketUseEntity;
@@ -20,6 +21,7 @@ public class KillAura extends Module {
 
 	public Timer timer = new Timer();
 	
+	public BooleanSetting rotations = new BooleanSetting("Rotations", false);
 	
 	
 	
@@ -41,6 +43,8 @@ public class KillAura extends Module {
 	
 	public KillAura() {
 		super("KillAura", Keyboard.KEY_X, Category.COMBAT, "Y");
+		this.addSettings(rotations);
+		
 		
 	}
 	
@@ -64,7 +68,7 @@ public class KillAura extends Module {
 						
 						mc.thePlayer.sendQueue.addToSendQueue(new C02PacketUseEntity(target, Action.ATTACK));
 					
-						if(KillAuraRotations.Rotate2) {
+						if(rotations.isEnabled()) {
 							mc.thePlayer.rotationYaw = getRotations(target)[0];
 							mc.thePlayer.rotationPitch = getRotations(target)[1];
 						}

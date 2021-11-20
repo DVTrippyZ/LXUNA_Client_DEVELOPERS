@@ -8,12 +8,15 @@ import net.minecraft.util.ResourceLocation;
 
 public class MainMenu extends GuiScreen {
 
+	
+	private boolean hovered = false;
+	
 	public MainMenu() {
 		
 	}
 	
 	public void initGui() {
-		
+		//Runs once the main menu is about to be loaded
 	}
 	
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
@@ -23,9 +26,9 @@ public class MainMenu extends GuiScreen {
 		
 		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 		this.drawGradientRect(0, height - 100, width, height, 0x00000000, 0xff000000);
-		this.drawString(fontRendererObj, "Developer: dvtrippy", 7, 230, -1);
+		this.drawString(fontRendererObj, "Developers: dvtrippy, Chummy", 7, 230, -1);
 		this.drawString(fontRendererObj, "Designer: Papa Quil -", 360, 230, -1);
-		String[] buttons = { "   Singleplayer", "   Multiplayer", "   Settings", "   Quit" };
+		String[] buttons = { "Singleplayer", "Multiplayer", "Settings", "Quit" };
 		int count = 0;
 		for(String name: buttons) {
 			
@@ -35,23 +38,27 @@ public class MainMenu extends GuiScreen {
 			
 			int fixedY = height - 120;
 			
+			
 			this.drawCenteredString(mc.fontRendererObj, name, (width/buttons.length) * count + 50, fixedY, -1);
 			
 			if(mouseX >= x && mouseY >= mouseY && mouseX < x + mc.fontRendererObj.getStringWidth(name) && mouseY < y + mc.fontRendererObj.FONT_HEIGHT) {
 				
 				switch (name) {
-				case "Singleplayers":
-					mc.displayGuiScreen(new GuiSelectWorld(this));
+				case "Singleplayer	":
+				
+					hovered = true;
+					System.out.println(hovered);
+					
 					break;
-				case "Multiplayers":
-					mc.displayGuiScreen(new GuiMultiplayer(this));
+				case "Multiplayer		":
+					
 					break;
-				case "Settingss":
-					mc.displayGuiScreen(new GuiOptions(this, mc.gameSettings));
+				case "Settings		":
+					
 					break;
 					
-				case "Quits":
-					mc.shutdown();
+				case "Quit		":
+					
 					break;
 					
 				}
@@ -66,8 +73,7 @@ public class MainMenu extends GuiScreen {
 			
 		
 		
-	
-	
+
 	public void mouseClicked(int mouseX, int mouseY, int button) {
 		
 		String[] buttons = { "Singleplayer", "Multiplayer", "Settings", "Quit" }; 
