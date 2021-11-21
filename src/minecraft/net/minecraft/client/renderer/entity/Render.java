@@ -21,6 +21,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import optifine.Config;
+import render.LxunaColor;
 
 import org.lwjgl.opengl.GL11;
 import shadersmod.client.Shaders;
@@ -370,6 +371,9 @@ public abstract class Render
             if(p_147906_1_ instanceof AbstractClientPlayer) {
             	   Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("img/froggy.png"));
             	   Gui.drawModalRectWithCustomSizedTexture(-Minecraft.getMinecraft().fontRendererObj.getStringWidth(p_147906_1_.getDisplayName ().getFormattedText()) /2- 12, -2, 10, 10, 10, 10, 10,10);
+            	} else {
+            		Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("img/circle.png"));
+             	   Gui.drawModalRectWithCustomSizedTexture(-Minecraft.getMinecraft().fontRendererObj.getStringWidth(p_147906_1_.getDisplayName ().getFormattedText()) /2- 12, -2, 10, 10, 10, 10, 10,10);
             	}
             
             
@@ -392,7 +396,7 @@ public abstract class Render
             var12.drawString(p_147906_2_, -var12.getStringWidth(p_147906_2_) / 2, var17, 553648127);
             GlStateManager.enableDepth();
             GlStateManager.depthMask(true);
-            var12.drawString(p_147906_2_, -var12.getStringWidth(p_147906_2_) / 2, var17, -1);
+            var12.drawString(p_147906_2_, -var12.getStringWidth(p_147906_2_) / 2, var17, LxunaColor.getPurple());
             GlStateManager.enableLighting();
             GlStateManager.disableBlend();
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);

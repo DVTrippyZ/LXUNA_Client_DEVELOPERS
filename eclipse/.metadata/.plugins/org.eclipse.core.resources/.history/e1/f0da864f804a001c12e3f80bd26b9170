@@ -1,0 +1,10 @@
+package intent.ui;
+
+public enum Errs {
+
+	CAPE("There is no such cape! Type ':capeList' to see all capes!");
+
+	Errs(String string) {
+		
+	}
+}

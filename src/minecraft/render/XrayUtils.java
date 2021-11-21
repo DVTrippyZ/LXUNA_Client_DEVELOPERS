@@ -1,18 +1,18 @@
-//package render;
-//
-//import net.minecraft.block.Block;
-//
-//public class XrayUtils {
-//
-//	
-//	
-//	
-//	
-//	
-//	
-//	
-//	
-//	
+////package render;
+////
+////import net.minecraft.block.Block;
+////
+////public class XrayUtils {
+////
+////	
+////	
+////	
+////	
+////	
+////	
+////	
+////	
+////	
 //	public static void initXRayBlocks() {
 //		Xray.xrayBlocks.add(Block.getBlockFromName("coal_ore"));
 //		Xray.xrayBlocks.add(Block.getBlockFromName("iron_ore"));
@@ -50,13 +50,13 @@
 //		Xray.xrayBlocks.add(Block.getBlockFromName("bookshelf"));
 //		Xray.xrayBlocks.add(Block.getBlockFromName("command_block"));
 //	}
-//	
-//	public static boolean isXrayBlock(Block b) {
-//		if(Xray.xrayBlocks.contains(b)) {
-//			return true;
-//		}
-//		
-//		return false;
-//		
-//	}
-//}
+////	
+////	public static boolean isXrayBlock(Block b) {
+////		if(Xray.xrayBlocks.contains(b)) {
+////			return true;
+////		}
+////		
+////		return false;
+////		
+////	}
+////}

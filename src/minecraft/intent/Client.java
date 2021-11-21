@@ -15,10 +15,13 @@ import intent.modules.Module.Category;
 
 import intent.modules.movement.*;
 import intent.ui.HUD;
+import intent.ui.LxunaOutput;
 import render.Bright;
+import render.CapeCosmetics;
 import render.ChestStealer;
 import render.SimpleUI;
 import render.TabGUI;
+import render.Xray;
 //import render.Xray;
 //import render.XrayUtils;
 
@@ -29,6 +32,7 @@ public class Client {
 	public static String version = "1";
 	public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
 	public static HUD hud = new HUD();
+	
 	
 	public static void startup() {
 		System.out.println("Starting " + name + " v" + version);
@@ -70,9 +74,11 @@ public class Client {
 		modules.add(new NameChanger());
 		modules.add(new SimpleUI());
 		modules.add(new ChestStealer());
-		
+		modules.add(new Xray());
+		modules.add(new Velocity());
 		//Adding the script you made
-		
+		modules.add(new Blink());
+		modules.add(new CapeCosmetics());
 		
 		//this adds the new file you made
 		//To get rid of file remove the modules.add statement

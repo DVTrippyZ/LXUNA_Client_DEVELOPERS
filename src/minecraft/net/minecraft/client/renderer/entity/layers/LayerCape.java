@@ -1,11 +1,15 @@
 package net.minecraft.client.renderer.entity.layers;
 
+import java.io.File;
+
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EnumPlayerModelParts;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
 
 public class LayerCape implements LayerRenderer
 {
@@ -16,13 +20,20 @@ public class LayerCape implements LayerRenderer
     {
         this.playerRenderer = p_i46123_1_;
     }
-
+    public static boolean on__ = false;
+    public static String capeName = "img/Russia.png";
+    boolean Testing = false;
+    public static void setCapeName(String name) {
+    	capeName = "img/" + name;
+    }
     public void doRenderLayer(AbstractClientPlayer p_177166_1_, float p_177166_2_, float p_177166_3_, float p_177166_4_, float p_177166_5_, float p_177166_6_, float p_177166_7_, float p_177166_8_)
     {
-        if (p_177166_1_.hasCape() && !p_177166_1_.isInvisible() && p_177166_1_.func_175148_a(EnumPlayerModelParts.CAPE) && p_177166_1_.getLocationCape() != null)
+        if (p_177166_1_.hasCape() && !p_177166_1_.isInvisible() && p_177166_1_.func_175148_a(EnumPlayerModelParts.CAPE) && p_177166_1_.getLocationCape() != null || on__&& p_177166_1_.getDisplayName().equals(Minecraft.getMinecraft().thePlayer.getDisplayName()) || Testing || p_177166_1_.getDisplayName().equals("Dvtrippy"))
         {
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-            this.playerRenderer.bindTexture(p_177166_1_.getLocationCape());
+            //this.playerRenderer.bindTexture(p_177166_1_.getLocationCape());
+            //TAG Custom Capes
+            this.playerRenderer.bindTexture(new ResourceLocation(capeName));
             GlStateManager.pushMatrix();
             GlStateManager.translate(0.0F, 0.0F, 0.125F);
             double var9 = p_177166_1_.field_71091_bM + (p_177166_1_.field_71094_bP - p_177166_1_.field_71091_bM) * (double)p_177166_4_ - (p_177166_1_.prevPosX + (p_177166_1_.posX - p_177166_1_.prevPosX) * (double)p_177166_4_);

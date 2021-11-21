@@ -1,9 +1,12 @@
 package net.minecraft.client.entity;
 
+import java.io.File;
+
 import intent.Client;
 import intent.events.EventType;
 import intent.events.listeners.EventUpdate;
 import intent.modules.movement.Rude;
+import intent.ui.HUD;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.MovingSoundMinecartRiding;
 import net.minecraft.client.audio.PositionedSoundRecord;
@@ -23,6 +26,7 @@ import net.minecraft.client.gui.inventory.GuiEditSign;
 import net.minecraft.client.gui.inventory.GuiFurnace;
 import net.minecraft.client.gui.inventory.GuiScreenHorseInventory;
 import net.minecraft.client.network.NetHandlerPlayClient;
+import net.minecraft.client.renderer.entity.layers.LayerCape;
 import net.minecraft.command.server.CommandBlockLogic;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IMerchant;
@@ -47,7 +51,9 @@ import net.minecraft.stats.StatBase;
 import net.minecraft.stats.StatFileWriter;
 import net.minecraft.tileentity.TileEntitySign;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.IChatComponent;
@@ -259,15 +265,106 @@ public class EntityPlayerSP extends AbstractClientPlayer
      */
     protected void joinEntityItemWithWorld(EntityItem p_71012_1_) {}
 
+    private String command(String cmd) {
+    	
+    	return cmd.substring(1);
+    	
+    }
+    
+  
+    
     /**
      * Sends a chat message from the player. Args: chatMessage
      */
     public void sendChatMessage(String p_71165_1_)
     {
     	
+    	//TAG message events
+    	char prefix_lxuna = ':';
+    	//If message starts with prefix dont send it and reg as event
+    	if(p_71165_1_.charAt(0) == prefix_lxuna) {
+    		System.out.println("NULL");
+    		if(command(p_71165_1_).substring(0, 4).equals("cape")) {
+    			 System.out.println("Cape");
+    			String capeName = command(p_71165_1_).substring(5);
+    			 
+    		
+//    			File theDir = new File("C:\\LXUNAMINECRAFTCLIENT");
+//    			if (!theDir.exists()){
+//    			    theDir.mkdir();
+//    			}
+    			//TODO make file creating installer command uses top code and merges capes from img to there
+    			if(p_71165_1_.length() > 7) {
+    			File[] capes_ = new File("C:\\LXUNAMINECRAFTCLIENT").listFiles();
+    			//If this pathname does not denote a directory, then listFiles() returns null. 
+    			
+    			for (File cape_ : capes_) {
+    			    if (cape_.isFile()) {
+    			        String capeNameDir = cape_.getName().substring(0, cape_.getName().length() -4);
+    			        String capeNameWithFileExtension = cape_.getName();
+    			        if(capeName.equals(capeNameDir)) {
+    			        	LayerCape.setCapeName(capeNameWithFileExtension);
+    			        	System.out.println(capeNameWithFileExtension);
+//    			        	HUD.errMessage = "Cape Activated!";
+//    			        	makeTimerForMsg(5);
+    			        	addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN + "Activated Cape!"));
+    			        	
+    			        	
+    			        } 
+    			        
+    			    }
+    			}
+    			
+    			
+    			} else {
+    				addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Could not find cape, do \":capeList to find cape names\""));
+    			//addChatMessage(new ChatComponentText("Usage: :cape <CapeName>, do \":capeList to find cape names\""));
+    			}
+    			
+    		} if(command(p_71165_1_).equals("capeList")) {
+    			
+    			
+    			
+    			
+    			
+    			File[] capes_s = new File("C:\\LXUNAMINECRAFTCLIENT").listFiles();
+    			//If this pathname does not denote a directory, then listFiles() returns null. 
+    			
+    			for (File cape__s : capes_s) {
+    			    if (cape__s.isFile()) {
+    			        String capeNameDir = cape__s.getName().substring(0, cape__s.getName().length() -4);
+    			        
+    			        addChatMessage(new ChatComponentText(capeNameDir));
+    			        
+    			        
+    			    }
+    			}
+    			
+    			
+    			
+    			
+    			
+    		} 
+    		
+    		
+    	} else {
+    		this.sendQueue.addToSendQueue(new C01PacketChatMessage(p_71165_1_));
+    	}
     	
     	
-        this.sendQueue.addToSendQueue(new C01PacketChatMessage(p_71165_1_));
+        
+    }
+    
+    private void makeTimerForMsg(int seconds) {
+    	new java.util.Timer().schedule( 
+		        new java.util.TimerTask() {
+		            @Override
+		            public void run() {
+		            	HUD.errMessage = null;
+		            }
+		        }, 
+		        seconds * 1000 
+		);
     }
 
     /**
@@ -504,6 +601,8 @@ public class EntityPlayerSP extends AbstractClientPlayer
     public void addChatMessage(IChatComponent message)
     {
         this.mc.ingameGUI.getChatGUI().printChatMessage(message);
+        
+        
     }
 
     /**

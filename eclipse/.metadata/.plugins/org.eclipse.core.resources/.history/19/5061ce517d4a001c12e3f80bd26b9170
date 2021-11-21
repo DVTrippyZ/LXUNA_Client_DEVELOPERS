@@ -1,0 +1,14 @@
+package intent.ui;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+
+public class LxunaOutput {
+	public Minecraft mc = Minecraft.getMinecraft();
+	
+	public static void renderOutput() {
+		FontRenderer fr = mc.fontRendererObj;
+		
+		fr.drawString("Output", 100, 100, -1);
+	}
+}

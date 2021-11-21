@@ -1,0 +1,30 @@
+package net.minecraft.network;
+
+import java.util.ArrayList;
+
+import net.minecraft.network.play.server.S03PacketTimeUpdate;
+
+public class PacketRecieve {
+	private static ArrayList<Long> times = new ArrayList<Long>();
+	private static TimerD tpsTimer = new TimerD();
+	public static double lastTps = 20.0;
+	
+	
+	
+	public static void onPacketRecieved(AbstractPacket modPacket) {
+		if(modPacket instanceof S03PacketTimeUpdate) {
+			times.add(Math.max(1000, tpsTimer.getTime()));
+			long timesAdded = 0;
+			if(times.size() > 5) {
+				times.remove(0);
+			}
+			for(long l : times) {
+				timesAdded += l;
+			}
+			long roundedTps = timesAdded / times.size();
+			lastTps = (20.0 / roundedTps) * 1000.0;
+			tpsTimer.reset();
+		}
+		
+	}
+}

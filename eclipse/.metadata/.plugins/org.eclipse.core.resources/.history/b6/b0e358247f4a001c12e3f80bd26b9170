@@ -1,0 +1,10 @@
+package intent.ui;
+
+public enum Errs {
+
+	CAPE("");
+
+	Errs(String string) {
+		
+	}
+}

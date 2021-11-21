@@ -28,18 +28,18 @@ public class SpeedHack extends Module{
 	
 	
 	public SpeedHack() {
-		super("SpeedHack", Keyboard.KEY_C, Category.MOVEMENT, "U");
+		super("Speed", Keyboard.KEY_C, Category.MOVEMENT, "U");
 		
 	}
 	
 	public void onEvent(Event e) {
 		if(e instanceof EventUpdate) {
 			if(e.isPre()) {
-				if(mc.thePlayer.onGround) {
+				if(mc.thePlayer.onGround && mc.gameSettings.keyBindForward.pressed) {
 					mc.thePlayer.motionX *= speedLXUNA;
 					mc.thePlayer.motionZ *= speedLXUNA;
 					
-				}
+				} 
 			}
 		}
 	}

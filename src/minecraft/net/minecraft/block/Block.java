@@ -37,6 +37,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import render.Xray;
 //import render.XrayUtils;
 
 public class Block
@@ -463,10 +464,15 @@ public class Block
 
     public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
     {
-//    	if(Client.getModules().get(7).isEnabled()) {
-//    		return XrayUtils.isXrayBlock(this);
-//    	}
+
+    	
+    	if(Xray.xray_) {
+    		return Xray.isXrayBlock(this);
+    	}
+    	
+    	else {
         return side == EnumFacing.DOWN && this.minY > 0.0D ? true : (side == EnumFacing.UP && this.maxY < 1.0D ? true : (side == EnumFacing.NORTH && this.minZ > 0.0D ? true : (side == EnumFacing.SOUTH && this.maxZ < 1.0D ? true : (side == EnumFacing.WEST && this.minX > 0.0D ? true : (side == EnumFacing.EAST && this.maxX < 1.0D ? true : !worldIn.getBlockState(pos).getBlock().isOpaqueCube())))));
+    	}
     }
 
     /**

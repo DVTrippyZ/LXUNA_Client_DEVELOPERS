@@ -42,6 +42,7 @@ public class HUD {
 	private boolean mePREFXLAXUNA = false;
 	AimAssist aim = new AimAssist();
 	
+	public static String errMessage = null;
 	
 	
 	
@@ -60,6 +61,8 @@ public class HUD {
 	}
 	
 	public void draw() {
+		LxunaOutput p = new LxunaOutput();
+		
 		FontRenderer fr = mc.fontRendererObj;
 		
 		ScaledResolution sr = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
@@ -79,7 +82,7 @@ public class HUD {
 	int hLXUNA_ = 30;
 	int wLXUNA_ = hLXUNA + 105;
 	
-	RenderImage.renderSingle("img/title.png", 0, 0, 130, wLXUNA_ / 4, wLXUNA_, hLXUNA_);
+	RenderImage.renderSingle("img/title.png", 0, 0, 130, wLXUNA_ / 4, wLXUNA_ - 10, hLXUNA_);
 	fr.drawString(PrefAndInfo.LXUNAVersion, 40, 5, 0x10ffffff);
 	int guiPositionLXUNA = sr.getScaledWidth() - fr.getStringWidth("LXUNA") - 68;
 	int dashGuiPositionLXUNA = sr.getScaledWidth() - fr.getStringWidth("LXUNA") - 75;
@@ -101,11 +104,12 @@ public class HUD {
 	
 	
 	if(Scaffold.scaffolding) {
+		int scaffoldDiv = 3;
 		
 		if((mc.thePlayer.getHeldItem() != null)) {
-		Gui.drawRect(sr.getScaledWidth() - 29 - 250, sr.getScaledHeight() - 4 - 25 - 100, sr.getScaledWidth() - 4 - 210, sr.getScaledHeight() - 4 - 79, 0x80333647);
-		fr.drawString(Integer.toString(mc.thePlayer.getHeldItem().stackSize), 208, 153, -1);
-		fr.drawString(mc.thePlayer.getHeldItem().getDisplayName(), 208, 133, -1);
+		Gui.drawRect((sr.getScaledWidth() - 29 - 250) / scaffoldDiv - 5, sr.getScaledHeight() - 4 - 25 - 100, (sr.getScaledWidth() - 4 - 210 + mc.thePlayer.getHeldItem().getDisplayName().length()) / scaffoldDiv + 50, sr.getScaledHeight() - 4 - 79, 0x80333647);
+		fr.drawString(Integer.toString(mc.thePlayer.getHeldItem().stackSize), 208 / scaffoldDiv, 153, -1);
+		fr.drawString(mc.thePlayer.getHeldItem().getDisplayName(), 208 / scaffoldDiv, 133, LxunaColor.startRainbow(5.8f));
 		
 		
 		
@@ -246,8 +250,9 @@ public class HUD {
 			
 			
 			
-			
 		} 
+		
+		
 		
 		if(!m.name.equals("[SemiColon] Rude") && !m.name.equals("List")) {
 		count++;
@@ -262,6 +267,11 @@ public class HUD {
 		
 		
 		//LXUNAmodulesCOUNTERPRIVATE(count);
+	//Custom Err messages
+	if(errMessage != null) {
+		p.renderOutput(errMessage);
+	}
+	
 	}
 
 	

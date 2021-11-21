@@ -1,0 +1,24 @@
+package render;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.modules.Module;
+
+public class CapeCosmetics extends Module{
+
+	public CapeCosmetics() {
+		super("Cape", Keyboard.KEY_NONE, Category.RENDER, "Y");
+		
+	}
+	
+	public void onEnable() {
+		
+	}
+	
+	
+	public void onDisable() {
+		
+	}
+	
+
+}

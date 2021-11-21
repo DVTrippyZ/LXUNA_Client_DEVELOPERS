@@ -79,8 +79,8 @@ public class Module {
 		PLAYER("Player"),
 		RENDER("Render"),
 		CHAT("Chat"),
-		BYPASS("Bypass"),
-		OPTIONS("Options");
+		BYPASS("Bypass");
+		
 		//Category that the super uses
 		
 		

@@ -9,12 +9,16 @@ import java.net.InetSocketAddress;
 import java.net.PasswordAuthentication;
 import java.net.Proxy;
 import java.net.Proxy.Type;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import joptsimple.ArgumentAcceptingOptionSpec;
 import joptsimple.NonOptionArgumentSpec;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import net.minecraft.client.Minecraft;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Session;
 
 public class Main
@@ -23,6 +27,48 @@ public class Main
 
     public static void main(String[] p_main_0_)
     {
+    	
+    	File DirForLxuna = new File("C:\\LXUNAMINECRAFTCLIENT");
+		if (!DirForLxuna.exists()){
+			DirForLxuna.mkdir();
+			
+			
+			
+			String dataFolder = System.getenv("APPDATA");
+			System.out.println(dataFolder);
+		    File[] filesInCustomDir = new File(dataFolder + "\\.minecraft\\versions\\LXUNALatest\\PATHSCAPES").listFiles();
+		    System.out.println(filesInCustomDir);
+		    for(File cape: filesInCustomDir) {
+		    	if(cape.isFile()) {
+		    		cape.renameTo(new File("C:\\" + DirForLxuna.getName() + "\\" + cape.getName()));
+		    		System.out.println(new File("C:\\" + DirForLxuna.getName() + "\\" + cape.getName()));
+		    		
+		    		
+		    		
+		    		
+		    		
+		    		
+		    	
+		    			    }
+		    		
+		    		
+		    		
+		    		
+		    	}
+		    
+		    
+			
+			
+			
+			
+			
+	}
+		
+		
+	    
+    	
+    	
+    	
         System.setProperty("java.net.preferIPv4Stack", "true");
         OptionParser var1 = new OptionParser();
         var1.allowsUnrecognizedOptions();

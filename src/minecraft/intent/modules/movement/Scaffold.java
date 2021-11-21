@@ -65,7 +65,7 @@ public class Scaffold extends Module{
 								place(playerBlock.add(0, -1, 6), EnumFacing.UP);
 								}else if(isValidBlock(playerBlock.add(-1, -1, 0))) {
 								place(playerBlock.add(0, -1, 0), EnumFacing.EAST);
-								}else if(isValidBlock(playerBlock.add(1, -1, 6))) {
+								}else if(isValidBlock(playerBlock.add(1, -1, 0))) { 
 								place(playerBlock.add(0, -1, 0), EnumFacing.WEST);
 								}else if(isValidBlock(playerBlock.add(0, -1, -1))) {
 								place(playerBlock.add(0, -1, 0), EnumFacing.SOUTH);
@@ -123,7 +123,7 @@ public class Scaffold extends Module{
 			            	unCrouch();
 			            }
 			        }, 
-			        5000 
+			        2000 
 			);
 		  
 			
