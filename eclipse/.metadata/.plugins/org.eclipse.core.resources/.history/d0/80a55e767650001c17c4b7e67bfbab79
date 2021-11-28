@@ -1,0 +1,46 @@
+package intent.modules.movement;
+
+import org.lwjgl.input.Keyboard;
+
+import net.minecraft.network.play.client.C01PacketChatMessage;
+import net.minecraft.network.play.client.C03PacketPlayer;
+import trippy.Client;
+import trippy.events.Event;
+import trippy.events.listeners.EventUpdate;
+import trippy.modules.Module;
+
+public class TestingFile extends Module{
+
+	
+	
+	
+	
+	public void onEnable() {
+	
+		
+	}
+	
+	public void onDisable() {
+		System.out.println("Disabled");
+//to make a new script copy this one, paste in the same namespace, then go to client and add it.
+		
+	}
+	
+	
+	public TestingFile() {
+		super("Whatever", Keyboard.KEY_NONE, Category.PLAYER, "Y");
+		
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				
+				System.out.println("Working");
+				
+				
+			}
+		}
+	}
+
+}

@@ -1,0 +1,83 @@
+package intent.modules.movement;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+import java.util.ArrayList;
+import java.util.List;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityOtherPlayerMP;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.client.network.NetHandlerPlayClient;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.client.C02PacketUseEntity;
+import net.minecraft.network.play.client.C03PacketPlayer;
+import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
+import net.minecraft.network.play.client.C0APacketAnimation;
+import net.minecraft.network.play.client.C0BPacketEntityAction;
+import net.minecraft.world.World;
+
+public class Blink extends Module{
+
+	
+	 private EntityOtherPlayerMP playerCopy;
+	    private List<Packet> packetList = new ArrayList<Packet>();
+
+	    @Override
+	    public void onEnable() {
+	        if (this.mc.thePlayer == null) {
+	            return;
+	        }
+	        this.playerCopy = new EntityOtherPlayerMP((World)mc.theWorld, mc.thePlayer.getGameProfile());
+	        this.playerCopy.inventory = this.mc.thePlayer.inventory;
+	        this.playerCopy.inventoryContainer = this.mc.thePlayer.inventoryContainer;
+	        this.playerCopy.setPositionAndRotation(this.mc.thePlayer.posX, this.mc.thePlayer.posY, this.mc.thePlayer.posZ, this.mc.thePlayer.rotationYaw, this.mc.thePlayer.rotationPitch);
+	        this.playerCopy.rotationYawHead = this.mc.thePlayer.rotationYawHead;
+	        this.mc.theWorld.addEntityToWorld(-1, (Entity)this.playerCopy);
+	        super.onEnable();
+	    }
+
+	    @EventTarget
+	    private void onPacketSend(PacketSendEvent event) {
+	        if (event.packet instanceof C0BPacketEntityAction || event.packet instanceof C03PacketPlayer || event.packet instanceof C02PacketUseEntity || event.packet instanceof C0APacketAnimation || event.packet instanceof C08PacketPlayerBlockPlacement) {
+	            this.packetList.add(event.packet);
+	            event.setCancelled(true);
+	        }
+	    }
+
+	    @Override
+	    public void onDisable() {
+	        super.onDisable();
+	        for (Packet packet : this.packetList) {
+	            this.mc.thePlayer.sendQueue.addToSendQueue(packet);
+	        }
+	        this.packetList.clear();
+	        this.mc.theWorld.removeEntityFromWorld(-1);
+	    }
+	
+	
+	public Blink() {
+		super("Blink", Keyboard.KEY_NONE, Category.PLAYER, "U");
+		
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				
+			}
+		}
+	}
+
+}

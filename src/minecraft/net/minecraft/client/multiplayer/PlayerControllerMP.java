@@ -1,7 +1,5 @@
 package net.minecraft.client.multiplayer;
 
-import intent.modules.movement.Reach;
-import intent.modules.movement.SpeedPlace;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -30,6 +28,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldSettings;
+import trippy.modules.movement.Reach;
+import trippy.modules.movement.SpeedPlace;
 
 public class PlayerControllerMP
 {

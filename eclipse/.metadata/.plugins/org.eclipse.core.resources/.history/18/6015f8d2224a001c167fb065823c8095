@@ -1,5 +1,0 @@
-package intent.events.listeners;
-
-public class EventSendPacket {
-
-}

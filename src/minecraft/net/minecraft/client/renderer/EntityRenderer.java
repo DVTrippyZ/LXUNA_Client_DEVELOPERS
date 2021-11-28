@@ -2,8 +2,6 @@ package net.minecraft.client.renderer;
 
 import com.google.gson.JsonSyntaxException;
 
-import intent.ui.MainMenu;
-
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.FloatBuffer;
@@ -85,6 +83,7 @@ import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.glu.Project;
 import shadersmod.client.Shaders;
 import shadersmod.client.ShadersRender;
+import trippy.ui.MainMenu;
 
 public class EntityRenderer implements IResourceManagerReloadListener
 {

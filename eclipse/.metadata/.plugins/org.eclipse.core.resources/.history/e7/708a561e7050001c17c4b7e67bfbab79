@@ -1,0 +1,29 @@
+package intent.modules.movement;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.modules.Module;
+
+public class Tp extends Module{
+
+	public Tp() {
+		super("Tp", Keyboard.KEY_NONE, Category.PLAYER, "U");
+		
+	}
+	
+	@Override
+	public void onEnable(){
+		Blink.ME = true;
+	}
+	
+	
+	@Override
+	public void onDisable(){
+		Blink.ME = false;
+		Blink.clear();
+	}
+	
+	
+	
+
+}

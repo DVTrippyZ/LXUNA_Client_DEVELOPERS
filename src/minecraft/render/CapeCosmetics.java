@@ -2,8 +2,8 @@ package render;
 
 import org.lwjgl.input.Keyboard;
 
-import intent.modules.Module;
 import net.minecraft.client.renderer.entity.layers.LayerCape;
+import trippy.modules.Module;
 
 public class CapeCosmetics extends Module{
 

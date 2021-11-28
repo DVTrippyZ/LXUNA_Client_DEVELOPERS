@@ -2,8 +2,6 @@ package net.minecraft.entity;
 
 import com.google.common.collect.Maps;
 
-import intent.modules.movement.HighJump;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -50,6 +48,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import trippy.modules.movement.HighJump;
 
 public abstract class EntityLivingBase extends Entity
 {

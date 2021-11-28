@@ -2,11 +2,6 @@ package net.minecraft.client.entity;
 
 import java.io.File;
 
-import intent.Client;
-import intent.events.EventType;
-import intent.events.listeners.EventUpdate;
-import intent.modules.movement.Rude;
-import intent.ui.HUD;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.MovingSoundMinecartRiding;
 import net.minecraft.client.audio.PositionedSoundRecord;
@@ -61,6 +56,13 @@ import net.minecraft.util.MovementInput;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.IInteractionObject;
 import net.minecraft.world.World;
+import trippy.Client;
+import trippy.events.EventType;
+import trippy.events.listeners.EventUpdate;
+import trippy.modules.movement.Blink;
+import trippy.modules.movement.HypixelFly;
+import trippy.modules.movement.Rude;
+import trippy.ui.HUD;
 
 public class EntityPlayerSP extends AbstractClientPlayer
 {
@@ -206,24 +208,40 @@ public class EntityPlayerSP extends AbstractClientPlayer
             double var11 = (double)(this.rotationPitch - this.field_175165_bM);
             boolean var13 = var3 * var3 + var5 * var5 + var7 * var7 > 9.0E-4D || this.field_175168_bP >= 20;
             boolean var14 = var9 != 0.0D || var11 != 0.0D;
-
+            //TODO tag LXUNA Blink
             if (this.ridingEntity == null)
             {
                 if (var13 && var14)
                 {
+                	if(!Blink.ME) {
                     this.sendQueue.addToSendQueue(new C03PacketPlayer.C06PacketPlayerPosLook(this.posX, this.getEntityBoundingBox().minY, this.posZ, this.rotationYaw, this.rotationPitch, this.onGround));
+                	} else {
+                		Blink.add(new C03PacketPlayer.C06PacketPlayerPosLook(this.posX, this.getEntityBoundingBox().minY, this.posZ, this.rotationYaw, this.rotationPitch, this.onGround));
+                	}
                 }
                 else if (var13)
                 {
+                	if(!Blink.ME) {
                     this.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(this.posX, this.getEntityBoundingBox().minY, this.posZ, this.onGround));
+                	} else {
+                		Blink.add(new C03PacketPlayer.C04PacketPlayerPosition(this.posX, this.getEntityBoundingBox().minY, this.posZ, this.onGround));
+                	}
                 }
                 else if (var14)
                 {
+                	if(!Blink.ME) {
                     this.sendQueue.addToSendQueue(new C03PacketPlayer.C05PacketPlayerLook(this.rotationYaw, this.rotationPitch, this.onGround));
+                	} else {
+                		Blink.add(new C03PacketPlayer.C05PacketPlayerLook(this.rotationYaw, this.rotationPitch, this.onGround));
+                	}
                 }
                 else
                 {
+                	if(!Blink.ME) {
                     this.sendQueue.addToSendQueue(new C03PacketPlayer(this.onGround));
+                	} else {
+                		Blink.add(new C03PacketPlayer(this.onGround));
+                	}
                 }
             }
             else

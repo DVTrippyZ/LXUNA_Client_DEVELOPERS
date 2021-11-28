@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value=" this.netClientHandler.addToSendQueue"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value=" this.netClientHandler.addToSendQueue"/>
+			<item value=" this.netClientHandler.addToSendQueue(new C02"/>
+			<item value=" this.netClientHandler.addToSendQueue(new C04"/>
+			<item value=" this.netClientHandler.addToSendQueue(new c03"/>
+			<item value="packet"/>
+			<item value="checkAndAddAlt"/>
+			<item value="this.mc.player"/>
+			<item value="vAR2"/>
+			<item value="&quot;*&quot;"/>
+			<item value="*"/>
+			<item value="Gui.drawRect"/>
+			<item value="drawRect"/>
+			<item value="case 7"/>
+			<item value="1.8"/>
 			<item value="frog"/>
-			<item value="\\"/>
-			<item value="bind"/>
-			<item value="tag"/>
-			<item value="chatMessage"/>
-			<item value="p."/>
-			<item value="hud"/>
-			<item value="persistantChatGUI"/>
-			<item value="getChat"/>
-			<item value="LXUNAMINECRAFTCLIENT"/>
-			<item value="sendChat"/>
-			<item value="chat"/>
-			<item value=" this.playerRenderer.bindTexture"/>
-			<item value="cape"/>
-			<item value="sendPacket"/>
 		</list>
 		<list key="replacehistory">
-			<item value=""/>
 			<item value="mc.thePlayer"/>
+			<item value="Gui.drawRectF"/>
+			<item value=""/>
 			<item value="m.name"/>
 			<item value="!m.name.equals(&quot;[SemiColon] Rude&quot;) &amp;&amp; !m.name.equals(&quot;List&quot;)"/>
 			<item value="!m.name.equals(&quot;[SemiColon] Rude&quot;)"/>

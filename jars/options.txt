@@ -15,7 +15,7 @@ fancyGraphics:true
 ao:2
 renderClouds:true
 resourcePacks:[]
-lastServer:mc.hypixel.net
+lastServer:play.stratus.network
 lang:en_US
 chatVisibility:0
 chatColors:true

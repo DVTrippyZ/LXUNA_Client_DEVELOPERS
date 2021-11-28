@@ -1,34 +1,32 @@
-[15:35:55] [Client thread/INFO]: Setting user: Player57
-[15:35:55] [Client thread/INFO]: (Session ID is token:0:Player57)
-[15:35:56] [Client thread/INFO]: LWJGL Version: 2.9.1
-[15:35:56] [Client thread/INFO]: Reloading ResourceManager: Default
-[15:35:56] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:35:56] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[15:35:56] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:35:56] [Thread-7/INFO]: OpenAL initialized.
-[15:35:57] [Sound Library Loader/INFO]: Sound engine started
-[15:35:59] [Client thread/INFO]: Created: 4096x2048 textures-atlas
-[15:36:04] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[15:36:04] [Server thread/INFO]: Generating keypair
-[15:36:04] [Server thread/INFO]: Preparing start region for level 0
-[15:36:05] [Server thread/INFO]: Changing view distance to 8, from 10
-[15:36:05] [Server thread/INFO]: Player57[local:E:0ef78001] logged in with entity id 227 at (432.44149680443405, 67.0, -77.33052429334886)
-[15:36:05] [Server thread/INFO]: Player57 joined the game
-[15:36:05] [Server thread/INFO]: Saving and pausing game...
-[15:36:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[15:36:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[15:36:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[15:36:41] [Client thread/INFO]: [CHAT] §aActivated Cape!
-[15:37:00] [Server thread/INFO]: Saving and pausing game...
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[15:37:00] [Client thread/INFO]: Stopping!
-[15:37:00] [Client thread/INFO]: SoundSystem shutting down...
-[15:37:00] [Server thread/INFO]: Stopping server
-[15:37:00] [Server thread/INFO]: Saving players
-[15:37:00] [Server thread/INFO]: Saving worlds
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[15:37:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[15:37:01] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:14:51] [Client thread/INFO]: Setting user: Player9
+[11:14:51] [Client thread/INFO]: (Session ID is token:0:Player9)
+[11:14:51] [Client thread/INFO]: LWJGL Version: 2.9.1
+[11:14:52] [Client thread/INFO]: Reloading ResourceManager: Default
+[11:14:52] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:14:52] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[11:14:52] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:14:52] [Thread-7/INFO]: OpenAL initialized.
+[11:14:53] [Sound Library Loader/INFO]: Sound engine started
+[11:14:56] [Client thread/INFO]: Created: 4096x2048 textures-atlas
+[11:15:55] [Client thread/INFO]: Connecting to play.arkflame.com, 25565
+[11:15:56] [Client thread/INFO]: [CHAT]        
+[11:15:57] [Client thread/INFO]: [CHAT] 
+¡Consigue el rango EPICO!
+¡Obtenlo con el comando /vote!
+
+[11:15:58] [Client thread/INFO]: [CHAT] 
+[11:15:58] [Client thread/INFO]: [CHAT] Visita nuestra Tienda, Discord y otros en:
+[11:15:58] [Client thread/INFO]: [CHAT] https://arkflame.com (Vota para ganar RANGO)
+[11:15:58] [Client thread/INFO]: [CHAT]        
+[11:15:58] [Client thread/INFO]: [CHAT] Tienes tu Premio Diario disponible! Usa /reward para recibirlo!
+[11:16:57] [Client thread/INFO]: [CHAT] 
+HOST: Necesitamos 60USD para pagar el servidor,
+ ayudanos en arkflame.com/tienda§r
+
+[11:17:57] [Client thread/INFO]: [CHAT] 
+¡Enterate de nuestras ultimas novedades!
+¡Unete a nuestro Discord! arkflame.com/discord§r
+
+[11:18:00] [Client thread/INFO]: Stopping!
+[11:18:00] [Client thread/INFO]: SoundSystem shutting down...
+[11:18:00] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

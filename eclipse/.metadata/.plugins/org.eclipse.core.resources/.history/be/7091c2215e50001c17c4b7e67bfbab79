@@ -1,0 +1,70 @@
+package intent.modules.bypass;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+
+public class BRLNS extends Module{
+
+	
+	private List<String> allowedModules = new ArrayList<String>();
+	
+	//TODO add enable after disable module list
+	public BRLNS() {
+		super("play.brlns.net", Keyboard.KEY_NONE, Category.CONFIG, "Y");
+		
+		
+	}
+
+	@SuppressWarnings("unlikely-arg-type")
+	@Override
+	public void onEnable() {
+		addItems();
+		for(Module m : Client.modules) {
+			for(String s : allowedModules) {
+				if(m.toggled && !m.name.equals(allowedModules)) {
+					m.toggled = false;
+				}
+			}
+			
+			
+			
+			
+			
+			
+		}
+	}
+	
+	public void addItems() {
+		
+		allowedModules.add("TabGUI");
+		allowedModules.add("play.brlns.net");
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				for(Module m : Client.modules) {
+					
+						if(m.name.equals("Fly")) {
+							m.toggled = false;
+						}
+					
+					
+					
+					
+					
+					
+					
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,106 @@
+package intent.modules.bypass;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.events.Event;
+import intent.events.listeners.EventUpdate;
+import intent.modules.Module;
+
+public class BRLNS extends Module{
+
+	
+	private List<String> allowedModules = new ArrayList<String>();
+	private List<String> bannedModules = new ArrayList<String>();
+	
+	//TODO add enable after disable module list
+	public BRLNS() {
+		super("play.brlns.net", Keyboard.KEY_NONE, Category.CONFIG, "Y");
+		
+		
+	}
+
+	@SuppressWarnings("unlikely-arg-type")
+	@Override
+	public void onEnable() {
+		addItems();
+		
+	
+		
+		
+		for(Module m : Client.modules) {
+			
+			for(String s : allowedModules) {
+			
+			if(m.name.equals(s)) {
+				
+				
+				m.toggled = true;
+			} else {
+				m.toggled = false;
+			}
+		
+		
+		
+		
+		
+		
+		
+	}
+			
+			
+			
+			
+			
+		}
+	}
+	
+	public void addItems() {
+		
+		a("play.brlns.net");
+		a("TabGUI");
+		
+		//Banned part
+		
+		b("TargetStats");
+		
+		
+	}
+	
+	private void b(String b) {
+		bannedModules.add(b);
+	} 
+	
+	private void a(String a) {
+		allowedModules.add(a);
+	}
+	
+	public void onEvent(Event e) {
+		if(e instanceof EventUpdate) {
+			if(e.isPre()) {
+				for(Module m : Client.modules) {
+					
+						for(String s : bannedModules) {
+						
+						if(m.toggled && m.name.equals(s)) {
+							
+							
+							m.toggled = false;
+						}
+						}
+					
+					
+					
+					
+					
+					
+					
+				}
+			}
+		}
+	}
+	
+}

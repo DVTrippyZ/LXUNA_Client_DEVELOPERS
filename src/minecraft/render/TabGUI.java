@@ -5,18 +5,19 @@ import java.util.List;
 import org.lwjgl.input.Keyboard;
 
 import java.awt.Color;
-import intent.Client;
-import intent.events.Event;
-import intent.events.listeners.EventKey;
-import intent.events.listeners.EventRenderGUI;
-import intent.events.listeners.EventUpdate;
 
-import intent.modules.Module;
-import intent.settings.BooleanSetting;
-import intent.settings.Setting;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.util.EnumChatFormatting;
+import trippy.Client;
+import trippy.events.Event;
+import trippy.events.listeners.EventKey;
+import trippy.events.listeners.EventRenderGUI;
+import trippy.events.listeners.EventUpdate;
+import trippy.modules.Module;
+import trippy.modules.bypass.BRLNS;
+import trippy.settings.BooleanSetting;
+import trippy.settings.Setting;
 
 public class TabGUI extends Module{
 	public boolean isShortCut = false;
@@ -147,16 +148,43 @@ public class TabGUI extends Module{
 						
 						
 						if(!modules.get(moduleIndex).name.equals(m.name)) {
-						fr.drawString(m.name, 5 + 70, 35 + count*16, LxunaColor.getPink());
+							//TODO Config Tag
+							if(BRLNS.config) {
+								for(String ss : BRLNS.bannedModules) {
+									if(!m.name.equals(ss)) {
+										fr.drawString(m.name, 5 + 70, 35 + count*16, LxunaColor.getPink());
+									}
+								}
+							} else {
+								fr.drawString(m.name, 5 + 70, 35 + count*16, LxunaColor.getPink());
+							}
+						
+							
+						
 						}
 					} else{
 						if(!modules.get(moduleIndex).name.equals(m.name)) {
+							
+							if(BRLNS.config) {
+							for(String s : BRLNS.bannedModules) {
+								
+								if(!m.name.equals(s)) {
+									fr.drawString(m.name, 5 + 70, 35 + count*16, -1);
+								} else {
+									fr.drawString(EnumChatFormatting.RED + m.name, 5 + 70, 35 + count*16, -1);
+								}
+							}
+							
+							
+							
+						} else {
 							fr.drawString(m.name, 5 + 70, 35 + count*16, -1);
+							
 						}
 						
 						//Temp tag ? 3 : White
 					}
-					
+					}
 				} else {
 					if(m.toggled) {
 						fr.drawString(EnumChatFormatting.GREEN + m.name, 5 + 70, 35 + count*16, -1);
@@ -177,22 +205,7 @@ public class TabGUI extends Module{
 				//Temp tag ? 2
 				
 					
-					new java.util.Timer().schedule( 
-					        new java.util.TimerTask() {
-					            @Override
-					            public void run() {
-					            	int speed = 1;
-					            	if(!(aM > 5)) {
-					            		aM+=speed;
-					            	}
-					            	
-					            	
-					            }
-					            
-					            
-					        }, 
-					        1000
-					);
+			
 					
 					
 					
@@ -216,6 +229,29 @@ public class TabGUI extends Module{
 			
 			if(code == Keyboard.KEY_UP) {
 				aM = 0;
+				new java.util.Timer().schedule( 
+				        new java.util.TimerTask() {
+				            @Override
+				            public void run() {
+				            	int speed = 1;
+				            	int divisibleBy = 500;
+				            	if(!(aM > 5)) {
+				            		
+				            		for(int zz = 0; zz < 5000; zz++) {
+				            			if(zz% divisibleBy == 0) {
+				            				aM+=speed;
+				            			}
+				            		}
+				            		
+				            	}
+				            	
+				            	
+				            }
+				            
+				            
+				        }, 
+				        100
+				);
 				if(expanded) {
 					
 					Module module = modules.get(moduleIndex);
@@ -249,6 +285,30 @@ public class TabGUI extends Module{
 			
 			if(code == Keyboard.KEY_DOWN) {
 				aM = 0;
+				new java.util.Timer().schedule( 
+				        new java.util.TimerTask() {
+				            @Override
+				            public void run() {
+				            	int speed = 1;
+				            	int divisibleBy = 500;
+				            	if(!(aM > 5)) {
+				            		
+				            		for(int zz = 0; zz < 5000; zz++) {
+				            			if(zz% divisibleBy == 0) {
+				            				aM+=speed;
+				            			}
+				            		}
+				            		
+				            	}
+				            	
+				            	
+				            }
+				            
+				            
+				        }, 
+				        100
+				);
+				
 				if(expanded) {
 					Module module = modules.get(moduleIndex);
 					if(expanded && !modules.isEmpty() && modules.get(moduleIndex).expanded && module.settings.size() > 0) {    

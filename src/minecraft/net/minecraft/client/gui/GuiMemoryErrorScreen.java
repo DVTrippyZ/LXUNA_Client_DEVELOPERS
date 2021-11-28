@@ -2,8 +2,8 @@ package net.minecraft.client.gui;
 
 import java.io.IOException;
 
-import intent.ui.MainMenu;
 import net.minecraft.client.resources.I18n;
+import trippy.ui.MainMenu;
 
 public class GuiMemoryErrorScreen extends GuiScreen
 {

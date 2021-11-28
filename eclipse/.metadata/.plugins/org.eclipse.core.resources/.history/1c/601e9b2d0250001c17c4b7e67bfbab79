@@ -1,0 +1,37 @@
+package intent.modules.bypass;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.modules.Module;
+
+public class BRLNS extends Module{
+
+	//TODO add enable after disable module list
+	public BRLNS() {
+		super("play.brlns.net", Keyboard.KEY_NONE, Category.CONFIG, "Y");
+		
+	}
+
+	@Override
+	public void onEnable() {
+		
+		for(Module m : Client.modules) {
+			if(m.toggled && !m.name.equals("TabGUI") && !m.name.equals("KeyPress") && !m.name.equals("SimpleUI")) {
+				m.toggled = false;
+				
+			
+			} else if(!m.toggled) {
+				if(m.name.equals("")) {
+					m.toggled = true;
+				}
+			}
+			
+			
+			
+			
+		}
+	}
+	
+	
+}

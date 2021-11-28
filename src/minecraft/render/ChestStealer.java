@@ -2,13 +2,13 @@ package render;
 
 import org.lwjgl.input.Keyboard;
 
-import intent.Client;
-import intent.events.Event;
-import intent.events.listeners.EventUpdate;
-import intent.modules.Module;
 import net.minecraft.inventory.ContainerChest;
 import net.minecraft.network.play.client.C01PacketChatMessage;
 import net.minecraft.network.play.client.C03PacketPlayer;
+import trippy.Client;
+import trippy.events.Event;
+import trippy.events.listeners.EventUpdate;
+import trippy.modules.Module;
 
 public class ChestStealer extends Module{
 

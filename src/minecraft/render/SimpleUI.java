@@ -2,8 +2,8 @@ package render;
 
 import org.lwjgl.input.Keyboard;
 
-import intent.modules.Module;
-import intent.modules.Module.Category;
+import trippy.modules.Module;
+import trippy.modules.Module.Category;
 
 public class SimpleUI extends Module{
 

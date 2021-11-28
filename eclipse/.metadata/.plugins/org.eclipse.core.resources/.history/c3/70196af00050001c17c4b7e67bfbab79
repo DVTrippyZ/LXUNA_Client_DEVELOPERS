@@ -1,0 +1,26 @@
+package intent.modules.bypass;
+
+import org.lwjgl.input.Keyboard;
+
+import intent.Client;
+import intent.modules.Module;
+
+public class BRLNS extends Module{
+
+	public BRLNS() {
+		super("play.brlns.net", Keyboard.KEY_NONE, Category.CONFIG, "Y");
+		
+	}
+
+	@Override
+	public void onEnable() {
+		
+		for(Module m : Client.modules) {
+			if(m.toggled) {
+				m.toggled = false;
+			}
+		}
+	}
+	
+	
+}

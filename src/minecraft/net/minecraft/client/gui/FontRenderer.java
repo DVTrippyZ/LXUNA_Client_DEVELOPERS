@@ -4,10 +4,6 @@ import com.ibm.icu.text.ArabicShaping;
 import com.ibm.icu.text.ArabicShapingException;
 import com.ibm.icu.text.Bidi;
 
-import intent.Client;
-import intent.modules.Module;
-import intent.modules.movement.NameChanger;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +25,9 @@ import net.minecraft.util.ResourceLocation;
 import optifine.Config;
 import optifine.CustomColors;
 import optifine.FontUtils;
+import trippy.Client;
+import trippy.modules.Module;
+import trippy.modules.movement.NameChanger;
 
 import org.apache.commons.io.IOUtils;
 import org.lwjgl.opengl.GL11;

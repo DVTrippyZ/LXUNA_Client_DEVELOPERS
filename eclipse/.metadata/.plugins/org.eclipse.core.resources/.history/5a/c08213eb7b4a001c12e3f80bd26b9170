@@ -1,9 +1,0 @@
-package intent.ui;
-
-public class LxunaOutput {
-
-	
-	public void draw() {
-		
-	}
-}

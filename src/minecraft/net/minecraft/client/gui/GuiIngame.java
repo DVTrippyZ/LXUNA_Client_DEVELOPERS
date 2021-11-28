@@ -4,8 +4,6 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
-import intent.Client;
-
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -47,6 +45,7 @@ import net.minecraft.util.StringUtils;
 import net.minecraft.world.border.WorldBorder;
 import optifine.Config;
 import optifine.CustomColors;
+import trippy.Client;
 
 public class GuiIngame extends Gui
 {

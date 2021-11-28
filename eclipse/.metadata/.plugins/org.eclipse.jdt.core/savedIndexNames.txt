@@ -16,7 +16,6 @@ INDEX VERSION 1.131+C:\Users\roman\Desktop\LXUNA_Client_DEVELOPERS\eclipse\.meta
 3798263483.index
 3204140888.index
 3575244482.index
-137624701.index
 3287787032.index
 706438825.index
 3974213608.index

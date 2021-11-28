@@ -4,9 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import intent.Client;
-import intent.events.EventType;
-import intent.events.listeners.EventUpdate;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -39,6 +36,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import render.Xray;
 //import render.XrayUtils;
+import trippy.Client;
+import trippy.events.EventType;
+import trippy.events.listeners.EventUpdate;
 
 public class Block
 {

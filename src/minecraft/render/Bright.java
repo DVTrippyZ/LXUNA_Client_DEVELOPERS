@@ -2,9 +2,9 @@ package render;
 
 import org.lwjgl.input.Keyboard;
 
-import intent.events.Event;
-import intent.events.listeners.EventUpdate;
-import intent.modules.Module;
+import trippy.events.Event;
+import trippy.events.listeners.EventUpdate;
+import trippy.modules.Module;
 
 public class Bright extends Module{
 
